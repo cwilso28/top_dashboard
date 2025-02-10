@@ -1,5 +1,5 @@
 * {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 0;
   margin: 0;
   box-sizing: border;
@@ -37,6 +37,11 @@ ul {
   list-style-type: none;
 }
 
+button {
+  outline: none;
+  border: none;
+}
+
 /* Layout formatting */
 body {
   display: grid;
@@ -46,6 +51,10 @@ body {
 
 .nav-bar {
   grid-row: 1/-1;
+  display:grid;
+  grid-auto-rows: max-content;
+  gap: 75px;
+  padding: 20px;
 }
 
 .header {

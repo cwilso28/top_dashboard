@@ -2,7 +2,7 @@
   /* border: 1px solid black; */
   padding: 0;
   margin: 0;
-  box-sizing: border;
+  box-sizing: border-box;
 }
 body {
   font-family: Roboto, sans-serif;
@@ -31,10 +31,16 @@ body {
 }
 
 .announcements,
-.trending {
+.trending, 
+.trending button {
   background-color:white;
 }
 
+
+.nav-bar ul button:hover, 
+.header ul button:hover {
+  background-color: rgb(22, 127, 184);
+}
 
 .nav-bar ul button:active, 
 .header ul button:active {
@@ -80,7 +86,6 @@ body {
 
 .icon {
   width: 25px;
-  /* padding-left: 5px; */
 }
 
 .nav-bar>p img {
@@ -143,10 +148,18 @@ body {
   padding: 5px;
 }
 
+.header .search-button:hover,
+.header .notification-button:hover,
+.icon-block button:hover,
+.trend button:hover {
+  background-color:  rgb(224, 224, 224);
+}
+
 .header .search-button:active,
 .header .notification-button:active,
-.icon-block button:active {
-  background-color: rgb(184, 184, 184);
+.icon-block button:active,
+.trend button:active {
+  background-color: rgb(155, 154, 154);
 }
 
 .main-body-container {
@@ -287,3 +300,32 @@ input[type="search"] {
   font-size: 1em;
 }
 
+.trending {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  padding: 20px;
+  border-radius: 10px;
+  gap: 20px;
+}
+
+.trend button {
+  display:grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+button img {
+  grid-row: 1/-1;
+}
+
+.trend h1,
+.trend p {
+  font-size: 1em;
+}
+
+.trend button *:nth-child(2),
+.trend button *:nth-child(3) {
+  justify-self: left;
+}

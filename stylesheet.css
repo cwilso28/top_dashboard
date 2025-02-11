@@ -36,7 +36,8 @@ body {
 }
 
 
-.nav-bar ul button:active {
+.nav-bar ul button:active, 
+.header ul button:active {
   background-color: rgb(17, 101, 146);
 }
 
@@ -205,3 +206,23 @@ input[type="search"] {
     font-size: 1.75em;
   }
 }
+
+.header ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.header ul>li {
+  display: inline-block;
+}
+
+.header ul button {
+  font-size: 1.2em;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: 25px;
+  width: 150px;
+}
+

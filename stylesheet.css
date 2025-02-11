@@ -4,6 +4,9 @@
   margin: 0;
   box-sizing: border;
 }
+body {
+  font-family: Roboto, sans-serif;
+}
 
 /* Color formatting */
 .nav-bar,
@@ -45,6 +48,7 @@ ul {
 button {
   outline: none;
   border: none;
+  border-radius: 4px;
 }
 
 /* Layout formatting */
@@ -56,6 +60,11 @@ body {
 
 ul img {
   width: 25px;
+  /* padding-left: 5px; */
+}
+
+.nav-bar>p img {
+  width:50px;
 }
 
 .nav-bar {
@@ -64,6 +73,31 @@ ul img {
   grid-auto-rows: max-content;
   gap: 75px;
   padding: 20px;
+  button {
+    display:grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    justify-items: start;
+    font-size: 1.5em;
+    font-weight:700;
+    padding: 5px;
+  }
+
+  li {
+    display: grid;
+  }
+
+  ul {
+    display: grid;
+  }
+
+  > p {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 700;
+  }
 }
 
 .header {

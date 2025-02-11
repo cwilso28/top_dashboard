@@ -261,6 +261,29 @@ input[type="search"] {
 
 .main-body-sidebar-container {
   display: grid;
+  
   grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+
+.announcements {
+  display: grid;
+  grid-template-rows: repeat(3, 100px);
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.announcement {
+  height: 100%;
+  align-content: center;
+}
+
+.announcement:nth-last-child(n+2) {
+  border-bottom: 1px solid gray;
+}
+
+.announcement h1 {
+  font-size: 1em;
 }
 

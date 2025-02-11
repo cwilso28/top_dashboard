@@ -1,5 +1,5 @@
 * {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   padding: 0;
   margin: 0;
   box-sizing: border;
@@ -77,10 +77,15 @@ ul img {
     display:grid;
     grid-template-columns: 50px 1fr;
     align-items: center;
-    justify-items: start;
     font-size: 1.5em;
     font-weight:700;
-    padding: 5px;
+    padding: 5px 0px;
+    >*:nth-child(2) {
+      justify-self: left;
+    }
+    >*:nth-child(1) {
+      justify-self: center;
+    }
   }
 
   li {
